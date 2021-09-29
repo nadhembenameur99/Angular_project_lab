@@ -1,0 +1,28 @@
+{
+  "members": [
+    {
+      "id": "124",
+      "cin": "12345678",
+      "name": "nadhem ben ameur",
+      "createdDate": "2020-9",
+      "cv": "url",
+      "type": "TEACHER"
+    },
+    {
+      "id": "120",
+      "cin": "12345677",
+      "name": "wissem regaieg",
+      "createdDate": "2020-11",
+      "cv": "url",
+      "type": "TEACHER"
+    },
+    {
+      "id": "128",
+      "cin": "12345670",
+      "name": "anoir feki",
+      "createdDate": "2020-10",
+      "cv": "url",
+      "type": "TEACHER"
+    }
+  ]
+}
