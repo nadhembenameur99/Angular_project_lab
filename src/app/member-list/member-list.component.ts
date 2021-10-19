@@ -9,13 +9,17 @@ import {MemberService} from "../../Services/member.service";
 })
 export class MemberListComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'cin', 'type', 'cv', 'createdDate'];
-  datasource: Member[];
+  datasource: Member[] = [];
 
   constructor(private memberService: MemberService) {
-    this.datasource = memberService.tab;
   }
 
   ngOnInit(): void {
+    this.fetchDataSource();
+  }
+
+  private fetchDataSource(): void {
+    this.datasource = this.memberService.tab;
   }
 
 }

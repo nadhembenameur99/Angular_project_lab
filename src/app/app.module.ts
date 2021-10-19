@@ -8,18 +8,33 @@ import {MatSliderModule} from "@angular/material/slider";
 import {MatTableModule} from "@angular/material/table";
 import {MatIconModule} from "@angular/material/icon";
 import {MemberService} from "../Services/member.service";
+import {MemberFormComponent} from './member-form/member-form.component';
+import {AppRoutingModule} from './app-routing.module';
+import {RouterModule} from "@angular/router";
+import {MatButtonModule} from "@angular/material/button";
+import {MaterialModule} from "../material.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FlexModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
     AppComponent,
-    MemberListComponent
+    MemberListComponent,
+    MemberFormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    AppRoutingModule,
+    RouterModule,
+    MatButtonModule,
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FlexModule
   ],
   providers: [MemberService],
   bootstrap: [AppComponent]
