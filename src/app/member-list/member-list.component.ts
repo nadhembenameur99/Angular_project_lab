@@ -22,4 +22,8 @@ export class MemberListComponent implements OnInit {
     this.datasource = this.memberService.tab;
   }
 
+  onRemove(id: string) {
+    this.memberService.removeMemberById(id).then(() => this.datasource = this.memberService.tab)
+  }
+
 }

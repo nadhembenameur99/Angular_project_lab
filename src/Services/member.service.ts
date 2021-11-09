@@ -12,6 +12,16 @@ export class MemberService {
   constructor() {
   }
 
+  getMemberById(currentId: any): Promise<Member> {
+    //return this.httpClient.get<Member>('linktorestApi').toPromise();
+    return new Promise(resolve => resolve(this.tab.filter(item => item.id === currentId)[0] ?? null));
+  }
+
+  removeMemberById(id: string): Promise<void> {
+    this.tab = this.tab.filter(item => item.id !== id);
+    return new Promise<void>(resolve => resolve());
+  }
+
   saveMember(member: any): Promise<Member> {
     // return this.httpClient.post<Member>('linkToRestAPI',member).toPromise();
     const memberToSave = {...member,};
@@ -20,4 +30,5 @@ export class MemberService {
     this.tab = [memberToSave, ...this.tab.filter(item => item.id !== memberToSave.id)];
     return new Promise<Member>(resolve => resolve(memberToSave));
   }
+
 }
