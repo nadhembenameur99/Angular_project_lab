@@ -8,7 +8,7 @@ import {MemberService} from "../../Services/member.service";
   styleUrls: ['./member-list.component.css']
 })
 export class MemberListComponent implements OnInit {
-  displayedColumns: string[] = ['id', 'name', 'cin', 'type', 'cv', 'createdDate'];
+  displayedColumns: string[] = ['id', 'name', 'cin', 'type', 'cv', 'createdDate', 'action'];
   datasource: Member[] = [];
 
   constructor(private memberService: MemberService) {

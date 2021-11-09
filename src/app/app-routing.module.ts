@@ -6,6 +6,7 @@ import {RouterModule, Routes} from '@angular/router';
 
 
 const routes: Routes = [
+  {path: 'members/:id/edit', pathMatch: 'full', component: MemberFormComponent},
   {path: 'members', pathMatch: 'full', component: MemberListComponent},
   {path: 'Form', pathMatch: 'full', component: MemberFormComponent},
   {path: '', pathMatch: 'full', redirectTo: 'members'},

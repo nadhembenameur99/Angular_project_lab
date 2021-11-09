@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {MemberService} from "../../Services/member.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-member-form',
@@ -13,7 +15,7 @@ export class MemberFormComponent implements OnInit {
   type: any;
   cv: any;
 
-  constructor() {
+  constructor(private memberService: MemberService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -21,7 +23,9 @@ export class MemberFormComponent implements OnInit {
   }
 
   OnSub(value: FormGroup) {
-    console.log(value)
+    console.log(value);
+    this.memberService.saveMember(value).then
+    (() => this.router.navigate(['./members']));
   }
 
   InitForm(): void {

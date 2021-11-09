@@ -3,7 +3,7 @@
 <br>
 <hr>
 <div fxLayout="row" fxLayoutAlign="end center">
-  <button color="accent" mat-button style="background: #868484">
+  <button color="accent" mat-button routerLink="/Form" style="background: #868484">
     <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
     Create New
   </button>
@@ -47,6 +47,19 @@
     <ng-container matColumnDef="createdDate">
       <th *matHeaderCellDef mat-header-cell>Created Date:</th>
       <td *matCellDef="let element" mat-cell>{{element.createdDate}}</td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="action">
+      <th *matHeaderCellDef mat-header-cell></th>
+      <td *matCellDef="let element" mat-cell>
+        <button mat-button routerLink="/members/{{element.id}}/edit">
+          <mat-icon color="accent">edit</mat-icon>
+        </button>
+        <button mat-button>
+          <mat-icon color="warn">delete</mat-icon>
+        </button>
+      </td>
     </ng-container>
 
     <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
