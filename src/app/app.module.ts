@@ -15,12 +15,14 @@ import {MatButtonModule} from "@angular/material/button";
 import {MaterialModule} from "../material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FlexModule} from "@angular/flex-layout";
+import {RemoveDialogComponent} from './remove-dialog/remove-dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemberListComponent,
-    MemberFormComponent
+    MemberFormComponent,
+    RemoveDialogComponent
   ],
   imports: [
     BrowserModule,
