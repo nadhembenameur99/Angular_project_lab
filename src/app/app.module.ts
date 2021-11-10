@@ -39,7 +39,10 @@ import {RemoveDialogComponent} from './remove-dialog/remove-dialog.component';
     FlexModule
   ],
   providers: [MemberService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    RemoveDialogComponent
+  ]
 })
 export class AppModule {
 }

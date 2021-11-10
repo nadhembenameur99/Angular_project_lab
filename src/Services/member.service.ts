@@ -32,4 +32,9 @@ export class MemberService {
     return new Promise<Member>(resolve => resolve(memberToSave));
   }
 
+  getAllMembers(): Promise<Member[]> {
+    // return this.httpClient.get<Member[]>('linkToRestAPI').toPromise();
+    return new Promise<Member[]>(resolve => resolve(this.tab));
+  }
+
 }

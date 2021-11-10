@@ -7,6 +7,8 @@ import {MatDialogRef} from "@angular/material/dialog";
   styleUrls: ['./remove-dialog.component.css']
 })
 export class RemoveDialogComponent implements OnInit {
+  title: any;
+  message: any;
 
   constructor(public dialogRef: MatDialogRef<RemoveDialogComponent>,) {
   }
@@ -20,6 +22,8 @@ export class RemoveDialogComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.title = "Delete Action";
+    this.message = "Are you sure to delete this member?"
   }
 
 }

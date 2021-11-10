@@ -10,6 +10,13 @@
 </div>
 <br>
 <div>
+  <mat-form-field appearance="standard">
+    <mat-label style="color: brown">Filter</mat-label>
+    <input #input (keyup)="applyFilter($event)" matInput placeholder="Ex. Mia" style="color: #494949">
+  </mat-form-field>
+</div>
+<br>
+<div>
   <table [dataSource]="datasource" class="mat-elevation-z8 demo-table" mat-table>
     <!-- Position Column -->
     <ng-container matColumnDef="id">
