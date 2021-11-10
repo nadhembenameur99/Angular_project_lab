@@ -18,6 +18,7 @@ export class MemberService {
   }
 
   removeMemberById(id: string): Promise<void> {
+    // return this.httpClient.delete<void>('linkToRestAPI').toPromise();
     this.tab = this.tab.filter(item => item.id !== id);
     return new Promise<void>(resolve => resolve());
   }
