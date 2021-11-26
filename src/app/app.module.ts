@@ -16,13 +16,26 @@ import {MaterialModule} from "../material.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {FlexModule} from "@angular/flex-layout";
 import {RemoveDialogComponent} from './remove-dialog/remove-dialog.component';
+import {LayoutComponent} from './layout/layout.component';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {ToolsComponent} from './tools/tools.component';
+import {ArticleComponent} from './article/article.component';
+import {EventsComponent} from './events/events.component';
+import {FirebaseAppModule} from "@angular/fire/app";
+import {LoginComponent} from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MemberListComponent,
     MemberFormComponent,
-    RemoveDialogComponent
+    RemoveDialogComponent,
+    LayoutComponent,
+    DashboardComponent,
+    ToolsComponent,
+    ArticleComponent,
+    EventsComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +49,8 @@ import {RemoveDialogComponent} from './remove-dialog/remove-dialog.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    FlexModule
+    FlexModule,
+    FirebaseAppModule
   ],
   providers: [MemberService],
   bootstrap: [AppComponent],

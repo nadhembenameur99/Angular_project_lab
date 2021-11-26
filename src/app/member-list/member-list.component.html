@@ -1,19 +1,17 @@
-<mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-<mat-icon>picture_as_pdf</mat-icon>
 <br>
-<hr>
-<div fxLayout="row" fxLayoutAlign="end center">
-  <button color="accent" mat-button routerLink="/Form" style="background: #868484">
-    <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
-    Create New
-  </button>
-</div>
-<br>
-<div>
-  <mat-form-field appearance="standard">
-    <mat-label style="color: brown">Filter</mat-label>
-    <input #input (keyup)="applyFilter($event)" matInput placeholder="Ex. Mia" style="color: #494949">
-  </mat-form-field>
+<div fxLayout="row">
+  <div fxFlex="90%">
+    <mat-form-field appearance="standard">
+      <mat-label style="color: #9722b6">Filter</mat-label>
+      <input #input (keyup)="applyFilter($event)" matInput placeholder="Ex. Mia" style="color: #494949">
+    </mat-form-field>
+  </div>
+  <div fxLayoutAlign="end center">
+    <button color="accent" mat-button routerLink="/Form" style="background: #868484">
+      <mat-icon aria-hidden="false" aria-label="Example home icon">add</mat-icon>
+      Create New
+    </button>
+  </div>
 </div>
 <br>
 <div>
